@@ -1,5 +1,5 @@
 import mne
-from read_data import load_data
+from Blinking.load_data import load_data
 from mne import Epochs
 from mne.preprocessing import ICA
 from mne.channels import make_standard_montage

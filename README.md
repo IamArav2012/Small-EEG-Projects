@@ -1,8 +1,14 @@
-# Small_EEG_Projects-Dump-
-A dump of random small projects as documentation and learning. 
+# Small_EEG_Projects  
 
-This repo is made for documentation and consists of common eeg projects for the sake of learning. It includes:
-- Detection of thinking about left or right hand movement
-- Detection of eye blinks
+A collection of introductory EEG analysis projects created for documentation and learning. The goal of this repository is to showcase small but meaningful applications of EEG signal processing, serving as a foundation for more advanced work in the future.  
 
-For more information about eye blinks visit [`blinking.md`](/Blinking/Blinking.md), and for hand movement visit [`hand.md`](/Left_or_Right/Hand.md). 
+Currently, the repository includes two beginner-level projects:  
+
+- **Motor Imagery Classification**: Detecting whether a subject is imagining movement of the left or right hand.  
+- **Eye Blink Detection**: Identifying blinks from raw EEG signals and distinguishing them from background activity.  
+
+Each project is structured to highlight the preprocessing steps, feature extraction techniques, and classification methods involved in EEG analysis.  
+
+For detailed documentation, see:  
+- [Eye Blink Detection](/Blinking/Blinking.md)  
+- [Motor Imagery Classification](/Left_or_Right/Hand.md) 
