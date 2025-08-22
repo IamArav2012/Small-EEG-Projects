@@ -1,6 +1,6 @@
 # Hand.md
 
-This model is trained on the built-in data archive library, `mne.datasets.eegbvi`. The preprocessing of the data involves techiniques such as: 
+This model is trained on the built-in data archive library, `mne.datasets.eegbci`. The preprocessing of the data involves techiniques such as: 
 - Independent Component Analysis (ICA)
 - Bandpower extraction 
 - Common Spatial Pattern (CSP)

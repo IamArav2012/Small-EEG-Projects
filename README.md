@@ -1,4 +1,4 @@
-# Small_EEG_Projects  
+# Small-EEG-Projects  
 
 A collection of introductory EEG analysis projects created for documentation and learning. The goal of this repository is to showcase small but meaningful applications of EEG signal processing, serving as a foundation for more advanced work in the future.  
 
