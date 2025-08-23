@@ -14,7 +14,7 @@ from scipy.signal import welch
 
 def compute_bandpower(data, sf, band):
     band = np.array(band)
-    freqs, psd = welch(data, sf, nperseg=sf*2)
+    freqs, psd = welch(data, sf, nperseg=sf*2, window='hann')
     idx_band = np.logical_and(freqs >= band[0], freqs <= band[1])
     return np.mean(psd[:, idx_band], axis=1)
 

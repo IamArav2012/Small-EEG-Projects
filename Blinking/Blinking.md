@@ -1,28 +1,45 @@
-# Blinking.md
-The `Blinking` folder consists of the following files: 
-- `blinking.md` (This file)
-- `blinking.py`
-- `EEG-VV.zip`
-- `load_data.py`
+# Blinking.md  
 
-## EEG-VV.zip 
-This zipped file contains a copy of the orginal EEG-VV provided by the creators of this dataset. To find the original folders visit [**this website.**](https://gnan.ece.gatech.edu/eeg-eyeblinks/)
+The `Blinking` folder contains the following files:  
 
-## load_data.py 
-This is a python file needed to load the eeg data from EEG-VV. It is a modified version f the `read_data.py` file provided by th orignial authors. The scrip thas been adopted for this specific implementation. 
+- `blinking.md` (this file)  
+- `blinking.py`  
+- `EEG-VV.zip`  
+- `load_data.py`  
 
-# blinking.py
-This is the main script which achieves:
+---
+
+## EEG-VV.zip  
+
+This archive contains a copy of the **EEG-VV** dataset provided by the original authors. To access the original dataset and documentation, visit [this website](https://gnan.ece.gatech.edu/eeg-eyeblinks/).  
+
+---
+
+## load_data.py  
+
+This Python script loads EEG data from the EEG-VV dataset. It is a modified version of the `read_data.py` script released by the original authors, adapted for this specific implementation.  
+
+---
+
+## blinking.py  
+
+This is the primary model script. It achieves the following performance benchmarks:  
 ```
 Accuracy: 0.945 ± 0.0231
 
 Loss: 0.1855 ± 0.0925
 ```
-These were calculated using 20 different independent training trails. The model is lightweight and takes <1 minute on modern hardware. 
 
-## Refrences
-Agarwal, M., & Sivakumar, R. (2019). Blink: A fully automated unsupervised algorithm for eye-blink detection in EEG signals. In 57th Annual Allerton Conference on Communication, Control, and Computing (pp. 1045–1052). IEEE.
+These values were obtained over 20 independent training trials. The model is lightweight and runs in under one minute on modern hardware.  
 
-Agarwal, M., & Sivakumar, R. (2020). Charge for a whole day: Extending battery life for BCI wearables using a lightweight wake-up command. In Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems (pp. 1–12). ACM.
+*For details on the preprocessing techniques used, see [Hand.md](/Left_or_Right/Hand.md).*  
 
-Gupta, E., Agarwal, M., & Sivakumar, R. (2020). Blink to get in: Biometric authentication for mobile devices using EEG signals. In 2020 IEEE International Conference on Communications (pp. 1–7). IEEE.
+---
+
+## References  
+
+- Agarwal, M., & Sivakumar, R. (2019). *Blink: A fully automated unsupervised algorithm for eye-blink detection in EEG signals.* In **57th Annual Allerton Conference on Communication, Control, and Computing** (pp. 1045–1052). IEEE.  
+
+- Agarwal, M., & Sivakumar, R. (2020). *Charge for a whole day: Extending battery life for BCI wearables using a lightweight wake-up command.* In **Proceedings of the 2020 CHI Conference on Human Factors in Computing Systems** (pp. 1–12). ACM.  
+
+- Gupta, E., Agarwal, M., & Sivakumar, R. (2020). *Blink to get in: Biometric authentication for mobile devices using EEG signals.* In **2020 IEEE International Conference on Communications** (pp. 1–7). IEEE.
