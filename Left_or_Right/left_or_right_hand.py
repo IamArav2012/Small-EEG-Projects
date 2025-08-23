@@ -126,5 +126,3 @@ model.fit(x_train, y_train, validation_data=(x_val, y_val), epochs=total_epochs,
 # Evaluate
 test_loss, test_acc = model.evaluate(x_test, y_test)
 print(f'Test Loss: {test_loss:.4f}, Test Accuracy: {test_acc:.4f}')
-
-'''Test Loss: 0.6118, Test Accuracy: 0.7353 (one iteration test accuracy got upto 79.4% and another upto 82.35%. But can also get down to 61% in some iterations)'''

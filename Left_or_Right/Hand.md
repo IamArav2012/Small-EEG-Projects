@@ -24,15 +24,15 @@ These values were obtained from 20 independent training trials.
 
 ICA is a standard method in EEG analysis for artifact removal and noise reduction. It estimates independent components `S` by applying unmixing matrices `W` to the observed signals `X`:  
 
-$$
+$
 S = W X
-$$  
+$  
 
-$$\text{where}$$
+$\text{where}$
 
-$$
+$
 S \in \mathbb{R}^{m \times t}, \quad X \in \mathbb{R}^{n \times t}, \quad n = m
-$$  
+$
 
 This process is based on two assumptions:  
 
@@ -49,25 +49,20 @@ Bandpower features were derived from Power Spectral Density ([PSD](https://en.wi
 
 PSD estimates were computed using the **Welch method** with a `hann` window to minimize spectral leakage. The procedure:  
 
-1. Segment the EEG recording into shorter windows.  
-2. Apply a windowing function (e.g., `hann`, `hamming`).  
-3. Compute the periodogram for each segment:  
-
-   $
-   P_i(f) = \frac{1}{U} \left| \sum_{n=0}^{L-1} x_i'[n] \, e^{-j 2 \pi f n} \right|^2
-   $  
-
-4. Average all periodograms to obtain the Welch PSD estimate:  
-
-   $
-   \hat{S}_x(f) = \frac{1}{K} \sum_{i=0}^{K-1} P_i(f)
-   $  
-
-5. Compute bandpower by summing over the frequency bins in the desired range:  
-
-   $
-   \text{Bandpower} = \sum_{k=f_{\text{low}}}^{f_{\text{high}}} \hat{S}_x(f_k)
-   $ 
+1. Segment the EEG recording into shorter windows.
+2. Apply a windowing function (e.g., `hann`, `hamming`).
+3. Compute the periodogram for each segment:
+$
+P_i(f) = \frac{1}{U} \left| \sum_{n=0}^{L-1} x_i'[n] \, e^{-j 2 \pi f n} \right|^2
+$
+4. Average all periodograms to obtain the Welch PSD estimate:
+$
+\hat{S}_x(f) = \frac{1}{K} \sum_{i=0}^{K-1} P_i(f)
+$
+5. Compute bandpower by summing over the frequency bins in the desired range:
+$
+\text{Bandpower} = \sum_{k=f_{\text{low}}}^{f_{\text{high}}} \hat{S}_x(f_k)
+$
 
 ---
 
@@ -81,9 +76,9 @@ Bandpower features were standardized using `StandardScaler()`. This ensures:
 
 Standardization is defined as:  
 
-$$
+$
 X' = \frac{X - \mu}{\sigma}
-$$  
+$  
 
 $\mu = \text{mean}$
 
@@ -97,11 +92,9 @@ CSP is a feature extraction method widely used in EEG, especially for binary cla
 
 CSP computes spatial filters `w` by solving the generalized eigenvalue problem:  
 
-$$
+$
 C_1 w = \lambda C_2 w
-$$  
-
-where  
+$  
 
 - $C_1, C_2$ are the normalized covariance matrices of the two classes  
 - $w$ is an eigenvector (spatial filter)  
