@@ -26,9 +26,9 @@ ICA is a standard method in EEG analysis for artifact removal and noise reductio
 
 $
 S = W X
-$  
+$ 
 
-$\text{where}$
+where
 
 $
 S \in \mathbb{R}^{m \times t}, \quad X \in \mathbb{R}^{n \times t}, \quad n = m
@@ -49,20 +49,14 @@ Bandpower features were derived from Power Spectral Density ([PSD](https://en.wi
 
 PSD estimates were computed using the **Welch method** with a `hann` window to minimize spectral leakage. The procedure:  
 
-1. Segment the EEG recording into shorter windows.
-2. Apply a windowing function (e.g., `hann`, `hamming`).
-3. Compute the periodogram for each segment:
-$
-P_i(f) = \frac{1}{U} \left| \sum_{n=0}^{L-1} x_i'[n] \, e^{-j 2 \pi f n} \right|^2
-$
-4. Average all periodograms to obtain the Welch PSD estimate:
-$
-\hat{S}_x(f) = \frac{1}{K} \sum_{i=0}^{K-1} P_i(f)
-$
-5. Compute bandpower by summing over the frequency bins in the desired range:
-$
-\text{Bandpower} = \sum_{k=f_{\text{low}}}^{f_{\text{high}}} \hat{S}_x(f_k)
-$
+1. Segment the EEG recording into shorter windows.  
+2. Apply a windowing function (e.g., `hann`, `hamming`).  
+3. Compute the periodogram for each segment:  
+<img src='../images/Periodogram_Calcualtion.png' width=200>
+4. Average all periodograms to obtain the Welch PSD estimate:  
+<img src='../Images/Averaging_Periodograms.png' width=200>
+5. Compute bandpower by summing over the frequency bins in the desired range:  
+<img src='../images/Computing_Bandpower.png' width=200>
 
 ---
 
@@ -95,6 +89,8 @@ CSP computes spatial filters `w` by solving the generalized eigenvalue problem:
 $
 C_1 w = \lambda C_2 w
 $  
+
+where  
 
 - $C_1, C_2$ are the normalized covariance matrices of the two classes  
 - $w$ is an eigenvector (spatial filter)  
