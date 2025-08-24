@@ -24,15 +24,11 @@ These values were obtained from 20 independent training trials.
 
 ICA is a standard method in EEG analysis for artifact removal and noise reduction. It estimates independent components `S` by applying unmixing matrices `W` to the observed signals `X`:  
 
-$
-S = W X
-$ 
+$S = W X$ 
 
-where
+$where$
 
-$
-S \in \mathbb{R}^{m \times t}, \quad X \in \mathbb{R}^{n \times t}, \quad n = m
-$
+$S \in \mathbb{R}^{m \times t}, \quad X \in \mathbb{R}^{n \times t}, \quad n = m$
 
 This process is based on two assumptions:  
 
@@ -52,11 +48,11 @@ PSD estimates were computed using the **Welch method** with a `hann` window to m
 1. Segment the EEG recording into shorter windows.  
 2. Apply a windowing function (e.g., `hann`, `hamming`).  
 3. Compute the periodogram for each segment:  
-<img src='../images/Periodogram_Calcualtion.png' width=200>
+<img src='../Images/Periodogram_Calcualtion.png' width=200>
 4. Average all periodograms to obtain the Welch PSD estimate:  
 <img src='../Images/Averaging_Periodograms.png' width=200>
 5. Compute bandpower by summing over the frequency bins in the desired range:  
-<img src='../images/Computing_Bandpower.png' width=200>
+<img src='../Images/Computing_Bandpower.png' width=200>
 
 ---
 
@@ -70,13 +66,11 @@ Bandpower features were standardized using `StandardScaler()`. This ensures:
 
 Standardization is defined as:  
 
-$
-X' = \frac{X - \mu}{\sigma}
-$  
+$X' = \frac{X - \mu}{\sigma}$  
 
 $\mu = \text{mean}$
 
-$ \sigma = \text{standard deviation}$
+$\sigma = \text{standard deviation}$
 
 ---
 
@@ -86,9 +80,7 @@ CSP is a feature extraction method widely used in EEG, especially for binary cla
 
 CSP computes spatial filters `w` by solving the generalized eigenvalue problem:  
 
-$
-C_1 w = \lambda C_2 w
-$  
+$C_1 w = \lambda C_2 w$  
 
 where  
 
